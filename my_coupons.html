@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+</head>
+<style>
+    .main .heading {
+            text-align: left;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+</style>
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="heading">
+            <div>
+                <h3>My Coupons</h3>
+            <p style="font-size: 14px; color: #949494;text-align: left;margin-bottom: 10px;">Exclusive coupons just for you</p>
+            </div>
+            <img src="images/coupon.png" alt="" height="40">
+        </div>
+        <p style="font-weight: 500; text-align: left; margin: 20px 0 10px 0;">Lowest price near me</p>
+        <div class="coupon-card">
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <img src="images/Pharmacy-logo/CVS_Logo_2016.svg.svg" alt="" height="20">
+                <div style="text-align: right;">
+                    <p style="font-size: 13px; font-weight: 500;">Total: $10.66</p>
+                    <p style="font-size: 12px; color: #00deab; font-weight: 500;">Saving: 30%</p>
+                </div>
+            </div>
+            <hr>
+            <p style="color: #0054a8; font-weight: 600; margin: 10px 0 0 0;">Atorvastatin</p>
+            <p style="font-size: 12px; color: #7a7a7a; margin-bottom: 20px;">20 Chewable tablet 200mg / 28.5mg</p>
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <p style="background: #00deab; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-ticket-simple"></i> &nbsp;View Coupon</p>
+                <p style="background: #0054a8; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-mobile"></i> &nbsp;Text free coupon</p>
+            </div>
+        </div>
+        <div class="coupon-card">
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <img src="images/Pharmacy-logo/Longs_Drugs_logo.svg.svg" alt="" height="20">
+                <div style="text-align: right;">
+                    <p style="font-size: 13px; font-weight: 500;">Total: $12.00</p>
+                    <p style="font-size: 12px; color: #00deab; font-weight: 500;">Saving: 28%</p>
+                </div>
+            </div>
+            <hr>
+            <p style="color: #0054a8; font-weight: 600; margin: 10px 0 0 0;">Atorvastatin</p>
+            <p style="font-size: 12px; color: #7a7a7a; margin-bottom: 20px;">20 Chewable tablet 200mg / 28.5mg</p>
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <p style="background: #00deab; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-ticket-simple"></i> &nbsp;View Coupon</p>
+                <p style="background: #0054a8; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-mobile"></i> &nbsp;Text free coupon</p>
+            </div>
+        </div>
+        <div class="coupon-card">
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <img src="images/Pharmacy-logo/nimble.svg" alt="" height="20">
+                <div style="text-align: right;">
+                    <p style="font-size: 13px; font-weight: 500;">Total: $15.00</p>
+                    <p style="font-size: 12px; color: #00deab; font-weight: 500;">Saving: 15%</p>
+                </div>
+            </div>
+            <hr>
+            <p style="color: #0054a8; font-weight: 600; margin: 10px 0 0 0;">Atorvastatin</p>
+            <p style="font-size: 12px; color: #7a7a7a; margin-bottom: 20px;">20 Chewable tablet 200mg / 28.5mg</p>
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <p style="background: #00deab; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-ticket-simple"></i> &nbsp;View Coupon</p>
+                <p style="background: #0054a8; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-mobile"></i> &nbsp;Text free coupon</p>
+            </div>
+        </div>
+        <div class="coupon-card">
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <img src="images/Pharmacy-logo/Walmart_logo.svg.svg" alt="" height="20">
+                <div style="text-align: right;">
+                    <p style="font-size: 13px; font-weight: 500;">Total: $19.00</p>
+                    <p style="font-size: 12px; color: #00deab; font-weight: 500;">Saving: 21%</p>
+                </div>
+            </div>
+            <hr>
+            <p style="color: #0054a8; font-weight: 600; margin: 10px 0 0 0;">Atorvastatin</p>
+            <p style="font-size: 12px; color: #7a7a7a; margin-bottom: 20px;">20 Chewable tablet 200mg / 28.5mg</p>
+            <div class="d-flex" style="justify-content: space-between; width: 100%; align-items: center; margin-bottom: 10px;">
+                <p style="background: #00deab; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-ticket-simple"></i> &nbsp;View Coupon</p>
+                <p style="background: #0054a8; padding: 5px 15px; border-radius: 50px; font-size: 12px; font-weight: 600;color: #fff;"><i class="fa-solid fa-mobile"></i> &nbsp;Text free coupon</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

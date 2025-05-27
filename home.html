@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+    <style>
+        .location {
+            background-color: #00deab;
+            color: #fff;
+            padding: 8px 23px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .featured img{
+            height: 18px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main" style="padding-top: 20px;">
+        <div class="homepage-main">
+            <p class="home-text">Stop paying too much</p>
+            <img src="images/homepage-coupon.svg" alt="">
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search medications...">
+            <div class="suggestions"></div>
+        </div>
+        <p style="font-weight: 500; text-align: left; margin-top: 20px;">Top Savings</p>
+        <div class="featured">
+            <p style="color: rgb(68, 68, 68); font-weight: 500;margin-bottom: 20px;">Over 3,000 pharmacies nationwide accept our services
+            </p>
+            <div class="d-flex" style="align-items: center; justify-content: space-between;">
+                <img src="images/Pharmacy-logo/CVS_Logo_2016.svg.svg" alt="">
+                <img src="images/Pharmacy-logo/nimble.svg" alt="">
+                <img src="images/Pharmacy-logo/RiteAidnewfakelogo2.svg" alt="">
+            </div>
+            <div class="d-flex" style="align-items: center; justify-content: space-between;">
+                <img src="images/Pharmacy-logo/Longs_Drugs_logo.svg.svg" alt="">
+                <img src="images/Pharmacy-logo/target.svg" alt="">
+                <img src="images/Pharmacy-logo/Walmart_logo.svg.svg" alt="" style="height: 22px;">
+            </div>
+        </div>
+        <div class="how-works">
+            <p style="font-weight: 500; text-align: left; margin-bottom: 15px;">How it works</p>
+            <div class="how-work-inner">
+                <img src="images/paper.png" alt="">
+                <p style="color: #0054a8; font-size: 14px; font-weight: 600;">Search & Compare Prices</p>
+                <p style="color: #7a7a7a; font-size: 14px; font-size: 500; margin-bottom: 15px;">Get the best value on your prescriptions: search and compare prices.</p>
+                <img src="images/discount-coupon.png" alt="">
+                <p style="color: #0054a8;font-size: 14px;font-weight: 600;">Get Free Coupon</p>
+                <p style="color: #7a7a7a; font-size: 14px; font-size: 500; margin-bottom: 15px;">Choose how to receive your coupon: print, text, or email.</p>
+                <img src="images/pharmacy.png" alt="">
+                <p style="color: #0054a8;font-size: 14px;font-weight: 600;">Show Coupon to Pharmacist</p>
+                <p style="color: #7a7a7a; font-size: 14px; font-size: 500;">Easy savings: show your coupon on your phone or bring a printout.</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item active"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

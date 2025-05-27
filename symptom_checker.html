@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        .main .heading {
+            text-align: left;
+        }
+
+        .subtext {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gender-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .gender-btn {
+            background-color: #d3ecf8;
+            color: #000;
+        }
+
+        .gender-btn.active {
+            background-color: #0054a8 !important;
+            color: #fff !important;
+        }
+
+        .gender-buttons button {
+            width: 120px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .info-box {
+            background-color: #e7eaff;
+            padding: 10px;
+            font-size: 12px;
+            color: #333;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .logo span {
+            color: #0054a6;
+            font-style: italic;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .list-item {
+            padding: 15px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .inr-header {
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            height: 13px;
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #000;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 15px;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .checklist-btn {
+            margin-top: 30px;
+        }
+
+        .accordion .accordion-item {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            width: 100%;
+    padding: 12px 16px;
+    border: none;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+        }
+
+        .accordion-body {
+            padding: 10px 16px;
+            display: none;
+            background-color: #f9f9f9;
+            animation: expand 0.3s ease-in-out;
+        }
+
+        .accordion-body label {
+            display: block;
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        /* Remove default marker */
+        .accordion-body input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #0054a8;
+            border-radius: 50%;
+            outline: none;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .accordion-body input[type="radio"]:checked::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 8px;
+            height: 8px;
+            background: #0054a8;
+            border-radius: 50%;
+        }
+
+        /* Animation (optional) */
+        @keyframes expand {
+            from {
+                opacity: 0;
+                transform: scaleY(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container" id="page1">
+            <div class="heading">
+                <h3>Symptom Checker</h3>
+                <p style="color: rgb(139, 139, 139); font-size: 12px;margin-bottom: 15px;">Identify possible conditions
+                    and treatments related to your symptoms.</p>
+            </div>
+            <input type="number" placeholder="Age" id="ageInput" />
+            <div class="gender-buttons">
+                <button class="gender-btn male" onclick="selectGender(this, 'Male')">Male</button>
+                <button class="gender-btn female" onclick="selectGender(this, 'Female')">Female</button>
+            </div>
+            <div class="info-box">
+                💡 Save your age and sex for faster Symptom Checker usage.
+            </div>
+            <button class="login-btn" onclick="goNext()">Next <i class="fa-solid fa-caret-right"></i></button>
+        </div>
+        <!-- Page 2: Body List -->
+        <div class="container hidden" id="page2">
+            <div class="inr-header">
+                <span onclick="goBack()" style="cursor:pointer;">
+                    <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span style="color: rgb(139, 139, 139); font-size: 12px; margin-left: 10px;">Select a specific
+                    area</span>
+            </div>
+            <ul class="list">
+                <li class="list-item">All Head Symptoms <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Back of head')">Back of head <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Scalp')">Scalp <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Forehead')">Forehead <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Eyes')">Eyes <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Nose')">Nose <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Face')">Face <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Mouth')">Mouth <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Jaw')">Jaw <span>›</span></li>
+                <li class="list-item" onclick="openSymptoms('Ears')">Ears <span>›</span></li>
+            </ul>
+        </div>
+        <div class="container hidden" id="page3">
+            <div class="inr-header">
+                <span onclick="goToBodyList()"><i class="fa-solid fa-angle-left"></i></span>
+                <span style="color: rgb(139, 139, 139); font-size: 12px; margin-left: 10px;" id="symptomTitle"></span>
+            </div>
+            <form class="symptom-list" id="checklistForm">
+                <label><span>Pain</span><input type="checkbox" name="symptoms" value="Pain"></label>
+                <label><span>Swelling</span><input type="checkbox" name="symptoms" value="Swelling"></label>
+                <label><span>Itching</span><input type="checkbox" name="symptoms" value="Itching"></label>
+                <label><span>Lump</span><input type="checkbox" name="symptoms" value="Lump"></label>
+                <button type="button" class="checklist-btn login-btn" onclick="submitChecklist()">Add Symptoms</button>
+            </form>
+        </div>
+        <!-- Page 4: Summary -->
+        <div class="container hidden" id="page4">
+            <div class="inr-header">
+                <span onclick="goBackToPage3()"><i class="fa-solid fa-angle-left"></i></span>
+                <span style="color: rgb(139, 139, 139); font-size: 12px; margin-left: 10px;">Back</span>
+            </div>
+            <p style="font-size: 12px; font-weight: 500; text-align: left; margin-top: 15px;">Which symptoms are
+                bothering you the most ?</p>
+            <p style="color: rgb(139, 139, 139); font-size: 11px;text-align: left; margin-bottom: 20px;">Identifying
+                your primary symptoms affects your possible conditions list.</p>
+            <ul id="selectedSymptomsList" class="radio-list"></ul>
+            <button class="checklist-btn login-btn" onclick="finalCheck()">Check</button>
+        </div>
+        <!-- Page 5 -->
+        <div class="container hidden" id="page5">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <p class="accordion-header"><span>Headache Symptoms</span><span>›</span></p>
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <p class="accordion-header"><span>Neck Symptoms</span><span>›</span></p>
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let selectedGender = "";
+
+            function selectGender(button, gender) {
+                document.querySelectorAll('.gender-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                selectedGender = gender;
+            }
+
+            function goNext() {
+                const age = document.getElementById("ageInput").value;
+                if (!age) {
+                    alert("Please enter your age.");
+                    return;
+                }
+                if (!selectedGender) {
+                    alert("Please select a gender.");
+                    return;
+                }
+                localStorage.setItem("age", age);
+                localStorage.setItem("gender", selectedGender);
+                document.getElementById("page1").classList.add("hidden");
+                document.getElementById("page2").classList.remove("hidden");
+            }
+
+            function goBack() {
+                document.getElementById("page2").classList.add("hidden");
+                document.getElementById("page1").classList.remove("hidden");
+            }
+
+            function goToBodyList() {
+                document.getElementById("page3").classList.add("hidden");
+                document.getElementById("page2").classList.remove("hidden");
+            }
+
+            function openSymptoms(area) {
+                document.getElementById("symptomTitle").textContent = area + " Symptoms";
+                document.getElementById("page2").classList.add("hidden");
+                document.getElementById("page3").classList.remove("hidden");
+            }
+
+            function goBackToPage3() {
+                document.getElementById("page4").classList.add("hidden");
+                document.getElementById("page3").classList.remove("hidden");
+            }
+
+            function submitChecklist() {
+                const selected = [];
+                document.querySelectorAll('#checklistForm input[type="checkbox"]:checked').forEach(cb => {
+                    selected.push(cb.value);
+                });
+
+                if (selected.length === 0) {
+                    alert("Please select at least one symptom.");
+                    return;
+                }
+
+                alert("Symptoms selected: " + selected.join(", "));
+                // You can proceed to the next step here or redirect.
+            }
+
+            function submitChecklist() {
+                const selected = [];
+                document.querySelectorAll('#checklistForm input[type="checkbox"]:checked').forEach(cb => {
+                    selected.push(cb.value);
+                });
+
+                if (selected.length === 0) {
+                    alert("Please select at least one symptom.");
+                    return;
+                }
+
+                // Generate radio buttons for selected symptoms
+                const ul = document.getElementById("selectedSymptomsList");
+                ul.innerHTML = "";
+                selected.forEach((symptom, index) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                    <label>
+                        ${symptom}
+                        <input type="radio" name="finalSymptom" value="${symptom}" ${index === 0 ? "checked" : ""} />
+                    </label>`;
+                    ul.appendChild(li);
+                });
+
+                // Navigate to Page 4
+                document.getElementById("page3").classList.add("hidden");
+                document.getElementById("page4").classList.remove("hidden");
+            }
+
+            // Accordion Toggle
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const body = header.nextElementSibling;
+                    const isOpen = body.style.display === "block";
+
+                    // Close all
+                    document.querySelectorAll('.accordion-body').forEach(b => b.style.display = "none");
+
+                    // Open clicked
+                    if (!isOpen) {
+                        body.style.display = "block";
+                    }
+                });
+            });
+
+            function goBackToPage4() {
+                document.getElementById("page5").classList.add("hidden");
+                document.getElementById("page4").classList.remove("hidden");
+            }
+
+            function goToNext() {
+                alert("Proceeding with selected symptom!");
+            }
+
+            function finalCheck() {
+                // Optional: you can validate if a symptom is selected
+                const selectedRadio = document.querySelector('input[name="finalSymptom"]:checked');
+                if (!selectedRadio) {
+                    alert("Please select one symptom.");
+                    return;
+                }
+
+                // Navigate to Page 5
+                document.getElementById("page4").classList.add("hidden");
+                document.getElementById("page5").classList.remove("hidden");
+            }
+
+
+        </script>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

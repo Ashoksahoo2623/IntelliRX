@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+    <style>
+        label {
+            color: #000;
+        }
+
+        .main .heading {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .rxno {
+            text-align: left;
+            background-color: #dcedfe;
+            padding: 8px 20px;
+            border-radius: 10px;
+            border: 1px solid #d4e7fa;
+            margin-bottom: 10px;
+        }
+
+        .main .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            background: #0054a8;
+            border-radius: 10px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .main .details {
+            justify-content: space-between;
+            font-size: 14px;
+            color: #7a7a7a;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .main .d-flex .data {
+            width: 55%;
+            text-align: right;
+            color: #0054a8;
+            font-weight: 600;
+        }
+
+        .history-sec .history-date {
+            width: 100px;
+            background-color: #ddedfe;
+            color: #0054a8;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 8px 10px;
+            border-radius: 16px;
+            border: 1px solid #c8dff7;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <button class="back-btn" onclick="window.location.href='order_status.html'"><i
+            class="fa-solid fa-angle-left"></i></button>
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="heading">
+            <h3>Rx details</h3>
+        </div>
+        <div class="rxno">Rx# 3599815 - 59682</div>
+        <div class="status">
+            <p>Status</p>
+            <p style="background-color: #00deab;padding: 8px 25px;border-radius: 50px;">Order Received</p>
+        </div>
+        <div class="d-flex" style="margin-bottom: 15px;">
+            <img src="images/medicine.png" alt="" style="height: 30px; margin-right: 15px;">
+            <p style="font-weight: 500; font-size: 18px; color: #0054a8;">Cherry Syrup</p>
+        </div>
+        <div class="d-flex details">
+            <p>Doctor</p>
+            <p class="data">Peter Adamson</p>
+        </div>
+        <div class="d-flex details">
+            <p>For</p>
+            <p class="data">Test</p>
+        </div>
+        <div class="d-flex details">
+            <p>Direction for use</p>
+            <p class="data">As directed</p>
+        </div>
+        <div class="d-flex details">
+            <p>Refills</p>
+            <p class="data">2 untill 06/15/2025</p>
+        </div>
+        <div class="d-flex details">
+            <p>Pick-up Location</p>
+            <p class="data">Lake lock Road Deerfield, 1160015</p>
+        </div>
+        <div class="history-sec" style="text-align: left;">
+            <p style="font-weight: 500; text-align: left; margin-bottom: 15px;">History</p>
+            <div class="history-data" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <p class="history-date">10 Aug 2025 <br>9:40 AM</p>
+                <div style="font-size: 14px; font-weight: 500;color: #565656;">
+                    <p>Quantity : 100 &nbsp;|&nbsp; Insurance: NA</p>
+                    <p>Price : <span style="font-size: 18px;color: #000;">$9.49</span></p>
+                </div>
+            </div>
+            <div class="history-data" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <p class="history-date">15 July 2025 <br>8:30 AM</p>
+                <div style="font-size: 14px; font-weight: 500; color: #565656;">
+                    <p>Quantity : 130 &nbsp;|&nbsp; Insurance: NA</p>
+                    <p>Price : <span style="font-size: 18px;color: #000;">$8.23</span></p>
+                </div>
+            </div>
+            <div class="history-data" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <p class="history-date">22 Jun 2025 <br>11:10 AM</p>
+                <div style="font-size: 14px; font-weight: 500; color: #565656;">
+                    <p>Quantity : 120 &nbsp;|&nbsp; Insurance: NA</p>
+                    <p>Price : <span style="font-size: 18px;color: #000;">$10.25</span></p>
+                </div>
+            </div>
+            <div class="history-data" style="display: flex; align-items: center; margin-bottom: 10px;">
+                <p class="history-date">05 May 2025 <br>12:35 AM</p>
+                <div style="font-size: 14px; font-weight: 500; color: #565656;">
+                    <p>Quantity : 145 &nbsp;|&nbsp; Insurance: NA</p>
+                    <p>Price : <span style="font-size: 18px;color: #000;">$5.52</span></p>
+                </div>
+            </div>
+            <div class="history-data" style="display: flex; align-items: center; margin-bottom: 8px;">
+                <p class="history-date">19 Apr 2025 <br>2:15 PM</p>
+                <div style="font-size: 14px; font-weight: 500; color: #565656;">
+                    <p>Quantity : 189 &nbsp;|&nbsp; Insurance: NA</p>
+                    <p>Price : <span style="font-size: 18px;color: #000;">$9.45</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item active"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

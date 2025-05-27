@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+</head>
+<style>
+    label {
+        color: #000;
+        font-weight: 500;
+    }
+
+    .main .heading {
+        text-align: left;
+    }
+
+    .main a {
+        text-decoration: none;
+        color: #000;
+    }
+</style>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="heading">
+            <h3>Drugs & medications</h3>
+            <p style="color: rgb(139, 139, 139); font-size: 12px;margin-bottom: 15px;">Get the information you need on
+                22,000+ medications, designed for both patients and professionals.
+            </p>
+        </div>
+        <div class="search-container">
+            <label for="email">Name</label>
+            <input type="text" class="search-box" placeholder="Search drugs...">
+        </div>
+        <div class="medicine-details">
+            <p class="mb-2">Atorvastatin</p>
+            <p style="color: #d3d3d3; font-size: 12px; margin-bottom: 20px;">Atorvastatin is medication used to lower
+                cholesterol and triglycerides (fats) levels to help prevent
+                heart disease, angina (chest pain), strokes, and heart attacks. Atorvastatin calcium belongs to a
+                class...</p>
+            <div class="medicine-list">
+                <p>Side Effects</p>
+                <p>Pregnancy / Breastfeeding</p>
+                <p>Drug Interactions</p>
+                <p>Dosage</p>
+                <p>Support Group Q & A</p>
+                <p>Professional</p>
+                <p>Compare Alternatives</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="pl" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

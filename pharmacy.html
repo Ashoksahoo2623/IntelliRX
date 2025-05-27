@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+</head>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <button class="back-btn" onclick="window.location.href='medicine.html'"><i
+                class="fa-solid fa-angle-left"></i></button>
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="pharmacy-info">
+            <p style="font-size: 14px; color: #0054a8;">Show this FREE coupon to your pharmacist at</p>
+            <h2 id="pharmacy-name">Pharmacy Name</h2>
+        </div>
+        <div class="medicine-details">
+            <div class="medicine-item">
+                <div class="d-flex" style="align-items: center;">
+                    <img src="images/medicine.png" alt="" width="35" style="margin-right: 15px;">
+                    <div>
+                        <p id="medicine-name">Medicine Name</p>
+                        <p style="color: #e2e2e2; font-size: 12px;">20 Chewable tablets . 200mg/28.5mg</p>
+                    </div>
+                </div>
+
+                <p id="medicine-price">$20.00</p>
+                <div class="extra-price" style="text-align: center;">
+                    <p>
+                        <span>BIN - 003585</span>
+                    </p>
+                    <p>
+                        <span>PCN - ASPR0D1</span>
+                    </p>
+                    <p>
+                        <span>Group - GDX12</span>
+                    </p>
+                </div>
+            </div>
+            <div class="coupon-box">
+                <p>This is not insurance</p>
+                <p style="background-color: #00deab; padding: 10px 25px; border-radius: 50px;">IntelliRX Coupon</p>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="button text-btn">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>Text</p>
+            </button>
+            <button class="button email-btn">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <p>Email</p>
+            </button>
+            <button class="button print-btn">
+                <i class="fa-solid fa-print"></i>
+                <p>Print</p>
+            </button>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+</head>
+<style>
+    body {
+        background: #242d3a;
+    }
+
+    .main {
+        padding: 15px;
+        height: 100vh;
+        overflow: scroll;
+    }
+
+    .forgot-password {
+        text-align: right;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .forgot-password a {
+        color: #00deab;
+        text-decoration: none;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 10px;
+        background: #00deab;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    .login-btn:hover {
+        background: #038d6d;
+    }
+
+    .register-text {
+        font-size: 12px;
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    .register-text a {
+        color: #00deab;
+        text-decoration: none;
+    }
+
+    .login-container .title {
+        text-align: left;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    i {
+        text-align: left;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    input {
+    margin-bottom: 10px;
+}
+</style>
+
+<body>
+    <div class="main">
+        <div class="login-container">
+            <img src="images/IntelliRx_light.png" alt="" height="40" style="margin-bottom: 20px;">
+            <h3 class="title" style="margin-bottom: 30px;">Create your<br> account</h3>
+
+            <form action="#">
+                <label for="email">Name</label>
+                <input type="text" id="email" placeholder="user@intellipharma.com" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="user@intellipharma.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="*******" required>
+
+                <label for="password">Confirm Password</label>
+                <input type="password" id="password" placeholder="*******" required>
+
+                <a href="login.html">
+                    <button type="submit" class="login-btn">Create</button>
+                </a>
+            </form>
+
+            <p class="register-text">Already have account ? <a href="login.html">Login</a></p>
+        </div>
+</body>
+
+</html>

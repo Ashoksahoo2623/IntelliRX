@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliRX</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/js.js"></script>
+    <style>
+        label {
+            color: #000;
+        }
+
+        .main .heading {
+            text-align: left;
+        }
+
+        .main a{
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ---------------------------------------
+Menu Item
+--------------------------------------- -->
+
+    <div class="full-menu" id="fullMenu">
+        <div class="menu-header">
+            <button class="close-menu" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="prescriptions.html"><i class="fa-solid fa-prescription"></i>Prescriptions</a></li>
+            <li><a href="#"><i class="fa-solid fa-prescription-bottle-medical"></i>My Pharmacy</a></li>
+            <li><a href="refills.html"><i class="fa-solid fa-prescription-bottle"></i>Refills</a></li>
+            <li><a href="order_status.html"><i class="fa-solid fa-file-prescription"></i>Order</a></li>
+            <li><a href="drugs_medicine.html"><i class="fa-solid fa-tablets"></i>Drug Info</a></li>
+            <li><a href="symptom_checker.html"><i class="fa-solid fa-disease"></i>Symptom Checker</a></li>
+            <li><a href="my_coupons.html"><i class="fa-solid fa-trophy"></i>My Coupons</a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i>My Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-info"></i>Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="header">
+        <img src="images/IntelliRx_light.png" alt="" height="35">
+        <div class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+    </div>
+    <div class="main">
+        <div class="heading">
+            <h3>Saving Plan</h3>
+            <p style="color: rgb(139, 139, 139); font-size: 12px;margin-bottom: 15px;">Maximize your savings and enjoy added benefits</p>
+        </div>
+        <div class="comparison-wrapper">
+            <div class="row header-row">
+              <div class="feature-cell table-header">Features</div>
+              <div class="free-cell table-header">Free</div>
+              <div class="premium-cell table-header">Premium</div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Manage your prescription savings</div>
+              <div class="free-cell"><i class="fa fa-check"></i></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Cut prescription costs by up to 90% *</div>
+              <div class="free-cell"><i class="fa fa-check"></i></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Virtual care visits for $21.99 (Normally $49.99)</div>
+              <div class="free-cell"></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Enjoy free home delivery for eligible medications.</div>
+              <div class="free-cell"></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Customizable plans for you and every member of your family.</div>
+              <div class="free-cell"></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          
+            <div class="row">
+              <div class="feature-cell">Our dedicated support team is here to help</div>
+              <div class="free-cell"></div>
+              <div class="premium-cell"><i class="fa fa-check"></i></div>
+            </div>
+          </div>
+          <a href="#">
+            <button type="submit" class="login-btn">Start</button>
+        </a>
+    </div>
+    <div class="nav-bar">
+        <a href="home.html" class="nav-item"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
+        <a href="plans.html" class="nav-item active"><i class="fa-solid fa-coins"></i>&nbsp;Plan</a>
+        <a href="benifits.html" class="nav-item"><i class="fa-solid fa-award"></i>&nbsp;Benifit</a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-user"></i>&nbsp;Profile</a>
+    </div>
+    <div class="logout-popup">
+        Are you sure you want to log out? <br>
+        <button id="confirm-logout">Yes</button>
+        <button id="cancel-logout">No</button>
+    </div>
+</body>
+
+</html>
